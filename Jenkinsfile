@@ -4,7 +4,11 @@ pipeline {
             image 'python:3.10'
         }
     }
-    
+
+    environment {
+        VENV = 'venv'
+    }
+        
     stages {
         stage('Install Dependencies') {
             steps {
